@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int r;
+    int n;
+    int i;
+    int sum=0;
+    cin>>n;
+    for( i=0;n!=0;i++)
+    {
+        n=n/10;
+    }
+
+    for(int j=0;j<i;j++)
+    {
+        r=n%2;
+        sum=r*10+sum;
+        n=n/10;
+    }
+    if(sum==n)
+    {
+        cout<<"Palindrome";
+    }
+    else
+    {
+        cout<<"Not Palindrome";
+    }
+
+    return 0;
+}
+
